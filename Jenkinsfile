@@ -4,8 +4,11 @@ pipeline{
     }
     stages {
         stage ('DockerBuild'){
-            sh(script: "docker build -t python:v1 .")
-            sh(script: "docker images")
+            steps{
+                sh(script: "docker build -t python:v1 .")
+                sh(script: "docker images")
+            }
+            
         }
 
     }
