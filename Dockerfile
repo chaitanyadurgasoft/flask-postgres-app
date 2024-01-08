@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY requirements.txt /app/requirements.txt
 
+RUN pip install Flask
+
 COPY ./ /app/
 
 
